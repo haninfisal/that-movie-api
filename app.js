@@ -6,7 +6,7 @@ const path = require('path'); //heroku
 
 const key = '39964cd2';
 
-const PORT = process.env.PORT  //heroku step 1
+const PORT = process.env.PORT || 5000  //heroku step 1
 
 //heroku step 3
 if (process.env.NODE_ENV === 'production'){
@@ -83,4 +83,5 @@ app.get('/deleteMovie', (req, res) => {
 app.listen(5000, () => {
   console.log('server listening on port 5000');
 });
+
 

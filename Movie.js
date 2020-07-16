@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = 'mongodb+srv://Hanin:Ha23453456@cluster1-xpgru.mongodb.net/MovieDB?retryWrites=true&w=majorit';
 
 
-mongoose.connect(process.env.MONGODB_URI || db, // heroku step 2
+mongoose.connect(process.env.MONGODB_URI || db, 
   { useNewUrlParser: true }
   ) 
     .then(() => {
