@@ -126,13 +126,13 @@ class App extends Component {
                     onChange={this.onChange}
                   />
                 </FormGroup>
-                <Button color="primary">Find</Button>
+                <Button color="success">Find</Button>
                 <p />
               </Form>
             </Col>
           </Row>
           <Row>
-            <Table>
+            <Table dark>
               <thead>
                 <tr>
                   <th>Remove</th>
