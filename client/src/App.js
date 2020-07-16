@@ -161,7 +161,7 @@ class App extends Component {
                       <td>
                         Language: {mv.lang}
                         <p></p>
-                        <p>Time: {mv.time}</p>
+                        <p>Running Time: {mv.time}</p>
                         <p></p>
                         <p>Genre: {mv.genre}</p>
                         <p></p>
