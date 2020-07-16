@@ -6,7 +6,7 @@ const path = require('path'); //heroku
 
 const key = '39964cd2';
 
-const PORT = process.env.PORT || 8080 //heroku step 1
+const PORT = process.env.PORT || 5000 //heroku step 1
 
 //heroku step 3
 if (process.env.NODE_ENV === 'production'){
