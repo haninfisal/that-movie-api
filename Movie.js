@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGODB_URI || db, // heroku step 2
     console.log('MONGOOSE ERROR: ', error);
   });
 
+  //Schema
   const movSchema = new mongoose.Schema({
   
     title: {type: String},

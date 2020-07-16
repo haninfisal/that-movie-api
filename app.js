@@ -17,6 +17,7 @@ if (process.env.NODE_ENV === 'production'){
   });
 }
 
+//showmovies
 app.get('/showmovie', (req, res) => {
   const title = req.query.title;
     const querystr = `http://www.omdbapi.com/?t=${title}&apikey=${key}`;
@@ -54,7 +55,7 @@ axios.get(querystr).then(response => {
     });
 });
 
-
+//show all movies
 app.get('/showallmovies', (req, res) => {
   Muvi.find({})
     .sort([['_id', -1]])
@@ -66,7 +67,7 @@ app.get('/showallmovies', (req, res) => {
       });
 });
 
-
+//deletemovies
 app.get('/deleteMovie', (req, res) => {
 
     Muvi.deleteMany({title: req.query.title})
