@@ -3,19 +3,25 @@ const app = express();
 const axios = require('axios');
 const Muvi = require('./Movie');
 const path = require('path'); //heroku 
+const PORT = process.env.PORT || 5000  //heroku 
 
 const key = '39964cd2';
 
-const PORT = process.env.PORT || 5000  //heroku step 1
-
-//heroku step 3
-if (process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
-
-  app.get('*',(req, res)=> {
-      res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); //relative path
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+
+// //heroku step 3
+// if (process.env.NODE_ENV === 'production'){
+//   app.use(express.static('client/build'));
+
+//   app.get('*',(req, res)=> {
+//       res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); //relative path
+//   });
+// }
 
 //showmovies
 app.get('/showmovie', (req, res) => {
